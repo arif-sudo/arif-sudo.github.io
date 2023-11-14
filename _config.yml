@@ -16,13 +16,13 @@ minimal: false             # use a dark header
 # Menu
 
 navigation:                # accepts {file, title, url, icon, sidebaricon}
-  - {file: "index.html"}
-  - {file: "README.md"}
+  - {file: "index.html", title: "Homes", icon: home }
+  - {file: "README.md", title : "About me", icon: address-card}
 
 external:                  # shows a footer with social links - for available icons see fontawesome.com/icons
-  - {title: Mail, icon: envelope, url: "arif520gg@gmail.com"}
+  - {title: Mail, icon: envelope, url: ""}
   - {title: Github, icon: github, url: "https://github.com/arif-sudo"}
-  - {title: LinkedIn, icon: linkedin, url: "https://www.linkedin.com/in/arif-mammadov-892604299/"}
+  - {title: Twitter, icon: twitter, url: "https://twitter.com/home"}
 
 comments:
 #  disqus_shortname: ""    # see https://disqus.com/
