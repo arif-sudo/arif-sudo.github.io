@@ -15,14 +15,15 @@ Data types
   * Boolean
   * Undefined
   * Null -> const obj = null (tpyeof return 'object' )
-  * Symbol
-  * BigInt
+  * Symbol -> const country = Symbol('China')
+  * BigInt -> const bigNum = BigInt('123456789123456789123456789')
    
 2. Object data types
   * Objects
   * Arrays
   * Functions
-
+> There is no function data type in JS. However, if you use the typeof operator to find the data type of a function, you will see that it returns `function`.
+ 
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 
 
