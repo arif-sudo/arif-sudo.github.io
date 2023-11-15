@@ -106,12 +106,32 @@ if ( typeof x === 'undefined' )  -  CORRECT
 > If you want to reverse an array without mutating original array, you can use slice and reverse methods together.
   const newLetters = letters.slice().reverse();
 
-* concat() - joins two or more arrays and returns a new array, containing the joined arrays. This method does not change the existing arrays.<br>
-  const students1 = ["Cecilie", "Lone"]
-  const students2 = ["Emil", "Tobias", "Linus"]
-  const students3 = ["Mike", "Neil"]
+* concat() - joins two or more arrays and returns a new array, containing the joined arrays.<br>This method does not change the existing arrays.<br>
+  const students1 = ["Cecilie", "Lone"]<br>
+  const students2 = ["Emil", "Tobias", "Linus"]<br>
+  const students3 = ["Mike", "Neil"]<br>
   const students = students1.concat(students2, students3) -> ['Cecilie', 'Lone', 'Emil', 'Tobias', 'Linus', 'Mike', 'Neil']
-  
+
+---
+
+## Join & at methods
+* join() - method returns an array as a string and does not change the original array. It takes a separator as an argument The default separator is comma.  
+  letters.join() => 'B,M,U'<br>
+  letters.join('_') => 'B_M_U'<br>
+
+* at() - takes an integer value and returns the item at that index, allowing for positive and negative integers. **letters.at(0)** is equivalent syntax of **letters[0]**. However, it is really handful if you want to get the last element of an array. Instead of using **array[array.length-1]**, you can call **array.at(-1)**
+
+* forEach() - method calls a function or a callback function for each element in an array. This method is not executed for empty elements.
+  1. students.forEach(myFunction);<br>
+     function myFunction(student) {  
+       console.log(`${student} is a great student`)
+     }  
+  2. students.forEach(function (student) {  
+       console.log(`${student} is a great student`)  
+     });   
+  3. students.forEach((student) => console.log(`${student} is a great student`));  
+
+
 {% comment %}
 Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
 
