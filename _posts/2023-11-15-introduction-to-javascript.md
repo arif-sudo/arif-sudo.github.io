@@ -123,7 +123,7 @@ if ( typeof x === 'undefined' )  -  CORRECT
 
 * forEach() - method calls a function or a callback function for each element in an array. This method is not executed for empty elements.
   {% highlight language %}
-  1. students.forEach(myFunction);<br>
+  1. students.forEach(myFunction);
      function myFunction(student) {  
        console.log(`${student} is a great student`)
      }  
@@ -132,6 +132,8 @@ if ( typeof x === 'undefined' )  -  CORRECT
      });   
   3. students.forEach((student) => console.log(`${student} is a great student`));  
   {% endhighlight %}
+> You **can’t** use continue and break statements with forEach loop, because forEach loop always loop whole array
+
 ---
 
 ## Using for loop with arrays
@@ -141,6 +143,47 @@ for (const student of students) {
   console.log(`${student} is a great student`)  
 }
 {% endhighlight %}
+
+### map
+* map() - creates a new array from calling a function or a callback function for each array element. map() does not mutate the original array and does not execute the function for empty elements
+{% highlight language %}
+  const numbers = [ 1, 11, 32, 5 ];  
+  const tripleNumbers = numbers.map( (item) => item * 3 )
+  // Output: [ 3, 33, 96, 15 ]
+{% endhighlight %}
+
+### filter
+* filter() - creates a new array filled with elements that satisfy certain condition. filter() does not mutate the original array and does not execute the function for empty elements
+
+{% highlight language %}
+  const ages = [ 32, 33, 12, 40 ];  
+  const adult = ages.filter(item => item >= 18)
+  // Output: [ 32, 33, 40 ]
+{% endhighlight %}
+
+### Reduce
+* reduce() -executes a reducer function for each array element The reduce() method returns a single value: the function’s final result. It does not execute the function for empty array elements and does not change the original array. A reduce function can take 2 parameters: a reducer function and initialValue. (reducer function is required, but initialValue is optional) The reducer function can accept four parameters  
+1. total: It is required parameter and used to specify the initialValue, or the previously returned value of the function.<br>
+2. currentValue: It is required parameter and used to specify the value of the current element.<br>
+3. currentIndex: It is optional parameter and used to specify the array index of the current element.<br>
+4. arr: It is optional parameter and used to specify the array the current element belongs to.
+
+reduce() example  
+1. 
+{% highlight language %}
+ const numbers = [1,7, 28, 30, 4, 40, 3, 6];  
+ numbers.reduce ( (total, cur, i, arr) => {
+  console.log(`Iteration: ${i} : ${total}`)  
+  return total + cur;  
+}, 0)  
+{% endhighlight %}
+2. 
+{% highlight language %}
+ [1, 2, 3, 4].reduce((a, b) => a + b, 0)  
+  // Output: 10  
+{% endhighlight %}
+
+
 
 
 {% comment %}
