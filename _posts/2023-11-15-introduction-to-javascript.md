@@ -82,9 +82,29 @@ if ( typeof x === 'undefined' )  -  CORRECT
   letters.slice(-1) - the last element of array  
   letters.slice(-2) - the last two elements of array  
   letters.slice(0, -1) => [ 'B', 'E'] (start slicing from index 0, and slice everything except the last element) 
-  
-{% comment %}
 
+---
+
+## Splice
+* splice() - is so similar to slice method, but the main difference is that splice() actually changes the original array. This method returns the deleted part of the array  
+  letters -> ['B', 'E', 'U']
+  letters.splice(1) -> [ 'E', 'U'] (letters -> ['B'])
+  letters.splice(-1) -> removes the last element of letters array
+  const letters2 = letters.splice() -> []  ( an empty array )
+
+* The splice() method can add new elements into the array
+  letters -> ['B', 'E', 'U']
+  letters.splice(1, 1, 'M') -> letters -> [ 'B', 'M', 'U'] ( But method itself returns ['E'] )
+
+---
+
+## Reverse & Concat methods
+
+
+
+
+
+{% comment %}
 Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
 
 [jekyll-docs]: http://jekyllrb.com/docs/home
