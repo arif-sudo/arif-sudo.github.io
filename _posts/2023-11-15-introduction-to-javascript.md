@@ -169,16 +169,14 @@ for (const student of students) {
 4. arr: It is optional parameter and used to specify the array the current element belongs to.
 
 reduce() example  
-1. 
-{% highlight language %}
+1. {% highlight language %}
  const numbers = [1,7, 28, 30, 4, 40, 3, 6];  
  numbers.reduce ( (total, cur, i, arr) => {
   console.log(`Iteration: ${i} : ${total}`)  
   return total + cur;  
 }, 0)  
 {% endhighlight %}
-2. 
-{% highlight language %}
+2. {% highlight language %}
  [1, 2, 3, 4].reduce((a, b) => a + b, 0)  
   // Output: 10  
 {% endhighlight %}
