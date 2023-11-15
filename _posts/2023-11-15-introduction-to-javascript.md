@@ -122,6 +122,7 @@ if ( typeof x === 'undefined' )  -  CORRECT
 * at() - takes an integer value and returns the item at that index, allowing for positive and negative integers. **letters.at(0)** is equivalent syntax of **letters[0]**. However, it is really handful if you want to get the last element of an array. Instead of using **array[array.length-1]**, you can call **array.at(-1)**
 
 * forEach() - method calls a function or a callback function for each element in an array. This method is not executed for empty elements.
+  {% highlight language %}
   1. students.forEach(myFunction);<br>
      function myFunction(student) {  
        console.log(`${student} is a great student`)
@@ -130,6 +131,16 @@ if ( typeof x === 'undefined' )  -  CORRECT
        console.log(`${student} is a great student`)  
      });   
   3. students.forEach((student) => console.log(`${student} is a great student`));  
+  {% endhighlight %}
+---
+
+## Using for loop with arrays
+
+{% highlight language %}
+for (const student of students) {  
+  console.log(`${student} is a great student`)  
+}
+{% endhighlight %}
 
 
 {% comment %}
