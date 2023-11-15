@@ -3,27 +3,45 @@ title: "Javascript"
 layout: post
 ---
 
-Variable declaration
+## Variable declaration
 * Let
 * Var
 * Const
 
-Data types
+---
+
+## Data types
 1. Primitive data types
   * Number
   * String
   * Boolean
-  * Undefined
+  * Undefined -> let lastname (has one and only one value in it: undefined)
   * Null -> const obj = null (tpyeof return 'object' )
   * Symbol -> const country = Symbol('China')
   * BigInt -> const bigNum = BigInt('123456789123456789123456789')
+
    
 2. Object data types
   * Objects
   * Arrays
   * Functions
+
 > There is no function data type in JS. However, if you use the typeof operator to find the data type of a function, you will see that it returns `function`.
- 
+
+---
+
+## Typeof operator
+Typeof operator always returns string.
+
+if(typeof x === undefined) - WRONG
+if(typeof x === 'undefined') - CORRECT
+
+---
+
+## Type conversion & type coersion
+1. **Type conversion** is when you manually convert a value from one type to another using some methods (it is known as Explicit Conversion)
+2. **Type coercion** is when JS converts a value from one type to another automatically (it is known as Implicit Conversion)
+
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 
 
