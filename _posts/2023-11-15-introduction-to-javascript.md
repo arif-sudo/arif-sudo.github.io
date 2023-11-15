@@ -59,7 +59,30 @@ if ( typeof x === 'undefined' )  -  CORRECT
 6. parseFloat()  
   parseFloat('3.14Pi')
 
+---
 
+## Basic array methods
+* pop() - removes the last element from an array and returns the value that was removed
+* push() - adds a new element to an array as a last element of array and returns the new array length.
+* shift() - removes the first array element and "shifts" all other elements to a lower index.
+* unshift() - adds a new element to an array at the beginning and returns the new array length.
+
+---
+
+## Slice
+* slice() - lets us to extract a slice of an array into new array without changing the original array.  
+  const letters = ['B', 'E', 'U']  
+  letters.slice(1) -> [ 'E', 'U']  
+  const lettersCopy = letters.slice() -> Gets exact same copy of letters array  
+
+* The slice method can take two arguments. Then the method will select elements from the start argument, and up to (but not including) the end argument.  
+  letters.slice(0, 2) => [ 'B', 'E']
+
+* The slice() method can take negative value as an argument.
+  letters.slice(-1) - the last element of array  
+  letters.slice(-2) - the last two elements of array  
+  letters.slice(0, -1) => [ 'B', 'E'] (start slicing from index 0, and slice everything except the last element) 
+  
 {% comment %}
 
 Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
