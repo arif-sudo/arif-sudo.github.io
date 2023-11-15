@@ -33,8 +33,8 @@ layout: post
 ## Typeof operator
 Typeof operator always returns string.
 
-if(typeof x === undefined) - WRONG  
-if(typeof x === 'undefined') - CORRECT
+if ( typeof x === undefined )  -  WRONG  
+if ( typeof x === 'undefined' )  -  CORRECT
 
 ---
 
@@ -45,18 +45,18 @@ if(typeof x === 'undefined') - CORRECT
 ---
 
 ## Type Conversion
-1. String()
+1. String()  
   String(676)  
-2. toString()
+2. toString()  
   num.toString()
-3. toFixed()
+3. toFixed()  
   const num = 601.488  
   num.toFixed(2) => 601.49
-4. Number()
+4. Number()  
   Number('123')  
-5. parseInt()
+5. parseInt()  
   parseInt('123SomeText')  
-6. parseFloat()
+6. parseFloat()  
   parseFloat('3.14Pi')
 
 
