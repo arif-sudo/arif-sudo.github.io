@@ -87,22 +87,26 @@ if ( typeof x === 'undefined' )  -  CORRECT
 
 ## Splice
 * splice() - is so similar to slice method, but the main difference is that splice() actually changes the original array. This method returns the deleted part of the array  
-  letters -> ['B', 'E', 'U']
-  letters.splice(1) -> [ 'E', 'U'] (letters -> ['B'])
-  letters.splice(-1) -> removes the last element of letters array
+  letters -> ['B', 'E', 'U']<br>
+  letters.splice(1) -> [ 'E', 'U'] (letters -> ['B'])<br>
+  letters.splice(-1) -> removes the last element of letters array<br>
   const letters2 = letters.splice() -> []  ( an empty array )
 
-* The splice() method can add new elements into the array
-  letters -> ['B', 'E', 'U']
+* The splice() method can add new elements into the array<br>  
+  letters -> ['B', 'E', 'U']<br>
   letters.splice(1, 1, 'M') -> letters -> [ 'B', 'M', 'U'] ( But method itself returns ['E'] )
 
 ---
 
 ## Reverse & Concat methods
+* reverse() - method reverses the order of the elements in an array and changes the original array.  
+  letters -> ['B', 'E', 'U']  
+  letters.reverse() = > ['U', 'E', 'B']
 
+> If you want to reverse an array without mutating original array, you can use slice and reverse methods together.
+  const newLetters = letters.slice().reverse();
 
-
-
+* concat() - joins two or more arrays and returns a new array, containing the joined arrays. This method does not change the existing arrays. 
 
 {% comment %}
 Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
