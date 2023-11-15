@@ -90,9 +90,9 @@ if ( typeof x === 'undefined' )  -  CORRECT
   letters -> ['B', 'E', 'U']<br>
   letters.splice(1) -> [ 'E', 'U'] (letters -> ['B'])<br>
   letters.splice(-1) -> removes the last element of letters array<br>
-  const letters2 = letters.splice() -> []  ( an empty array )
+  const letters2 = letters.splice() -> [ ]  ( an empty array )
 
-* The splice() method can add new elements into the array<br>  
+* The splice() method can add new elements into the array<br>
   letters -> ['B', 'E', 'U']<br>
   letters.splice(1, 1, 'M') -> letters -> [ 'B', 'M', 'U'] ( But method itself returns ['E'] )
 
@@ -106,8 +106,12 @@ if ( typeof x === 'undefined' )  -  CORRECT
 > If you want to reverse an array without mutating original array, you can use slice and reverse methods together.
   const newLetters = letters.slice().reverse();
 
-* concat() - joins two or more arrays and returns a new array, containing the joined arrays. This method does not change the existing arrays. 
-
+* concat() - joins two or more arrays and returns a new array, containing the joined arrays. This method does not change the existing arrays.<br>
+  const students1 = ["Cecilie", "Lone"]
+  const students2 = ["Emil", "Tobias", "Linus"]
+  const students3 = ["Mike", "Neil"]
+  const students = students1.concat(students2, students3) -> ['Cecilie', 'Lone', 'Emil', 'Tobias', 'Linus', 'Mike', 'Neil']
+  
 {% comment %}
 Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
 
