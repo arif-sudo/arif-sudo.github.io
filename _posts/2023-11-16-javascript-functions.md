@@ -74,7 +74,7 @@ console.log(curriedAdd(3)(4));
 ---
 
 ## Scope
-Scope is the term used to describe which parts of our code have access to which variables.[for loop & timeout](https://www.freecodecamp.org/news/thrown-for-a-loop-understanding-for-loops-and-timeouts-in-javascript-558d8255d8a4/)
+Scope is the term used to describe which parts of our code have access to which variables. [For Loop & Timeout](https://www.freecodecamp.org/news/thrown-for-a-loop-understanding-for-loops-and-timeouts-in-javascript-558d8255d8a4/)
 * Examle 1
 ```
 // Global scope
@@ -173,6 +173,7 @@ function variableDemo() {
 variableDemo();
 console.log(i); //Error, can't access either value of i
 ```
+
 ---
 
 ## Events
