@@ -1,5 +1,5 @@
 ---
-title: "Javascript"
+title: "Javascript Part 1"
 layout: post
 ---
 
