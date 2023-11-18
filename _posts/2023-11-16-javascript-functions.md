@@ -76,6 +76,7 @@ console.log(curriedAdd(3)(4));
 ## Scope
 Scope is the term used to describe which parts of our code have access to which variables. [For Loop & Timeout](https://www.freecodecamp.org/news/thrown-for-a-loop-understanding-for-loops-and-timeouts-in-javascript-558d8255d8a4/)
 
+### Example 1
 ```
 // Global scope
 let globalVar = "I am global";
@@ -93,6 +94,7 @@ for(var a = 1; a < 10; a++) {} // declared "inside" the loop
 console.log(a); // prints "10" and is called "outside the loop"
 ```
 
+### Example 2
 {% highlight language %}
 function myFunction1() {
    var a = 'Brandon';
@@ -113,7 +115,7 @@ myFunction3() //Matt
 
 It appears the variable a is unique to each function. 
 
-Example 3  
+### Example 3  
 What will be output of this loop?  
 ```
 for(var i = 1; i < 6; i++) {
@@ -123,7 +125,6 @@ for(var i = 1; i < 6; i++) {
 }
 console.log('The loop is done!');
 ```  
-> Output: 
 > The loop is done!
 > 6 6 6 6 6  
 
