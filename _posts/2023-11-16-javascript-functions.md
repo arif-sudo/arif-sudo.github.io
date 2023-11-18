@@ -75,7 +75,7 @@ console.log(curriedAdd(3)(4));
 
 ## Scope
 Scope is the term used to describe which parts of our code have access to which variables. [For Loop & Timeout](https://www.freecodecamp.org/news/thrown-for-a-loop-understanding-for-loops-and-timeouts-in-javascript-558d8255d8a4/)
-* Examle 1<br>
+
 ```
 // Global scope
 let globalVar = "I am global";
@@ -93,9 +93,7 @@ for(var a = 1; a < 10; a++) {} // declared "inside" the loop
 console.log(a); // prints "10" and is called "outside the loop"
 ```
 
-* Example 2<br>
-```
-
+{% highlight language %}
 function myFunction1() {
    var a = 'Brandon';
    console.log(a);
@@ -111,10 +109,11 @@ function myFunction3() {
 myFunction1() //Brandon
 myFunction2() //Bill
 myFunction3() //Matt
-```  
+{% endhighlight %}
+
 It appears the variable a is unique to each function. 
 
-* Example 3<br>
+Example 3  
 What will be output of this loop?  
 ```
 for(var i = 1; i < 6; i++) {
@@ -131,8 +130,8 @@ console.log('The loop is done!');
 Every time we loop, setTimeout() is passed outside of the call stack and enters the event loop. Because of this, the engine is able to move to the next piece of code. The next piece of code happens to be the remaining iterations of the loop, followed by console.log(‘The loop is done!’).  
 
 ### **Applying the principles of scope to our example**  
-```
 
+{% highlight language %}
 for(var i = 1; i < 6; i++) {
    function timer(){ // create a unique function (scope) each time
       var k = i; // save i to the variable k which
@@ -142,7 +141,7 @@ for(var i = 1; i < 6; i++) {
    }
    timer();
 }
-```
+{% endhighlight %}
 > Output:
 > The loop is done!
 > 1 2 3 4 5  
@@ -165,7 +164,7 @@ Let does 2 things:
 2. The second thing let does for us is create a unique value of i each time the loop iterates. When our loop is over, we have created six separate values of i that are stored in memory that our console.log(i) statements can access. With var, we only had one variable that we kept overwriting.
 
 * An example to show let vs var behavior:  
-```
+{% highlight language %}
 function variableDemo() {
    var i = 'Hello World!';
    for(let i = 1; i < 3; i++) {
@@ -177,7 +176,7 @@ function variableDemo() {
 
 variableDemo();
 console.log(i); //Error, can't access either value of i
-```
+{% endhighlight %}
 
 ---
 
