@@ -182,6 +182,36 @@ console.log(i); //Error, can't access either value of i
 ---
 
 ## Events
+In JavaScript, events are actions or occurrences that happen in the browser, such as a user clicking a button, resizing a window, or a web page finishing loading.
+### Some events are
+1. click
+2. mouseover
+3. mouseout
+4. keydown
+5. change
+6. load
+7. submit
+
+### Example click event
+```
+const myButton = document.getElementById('myButton');
+
+myButton.addEventListener('click', function() {
+  console.log('Button clicked!');
+});
+```
+### Example keydown event
+{% highlight language %}
+document.addEventListener('keydown', function(event) {
+  console.log('Key pressed:', event.key);
+});    
+{% endhighlight %}
+### Example load event
+```
+window.addEventListener('load', function() {
+  console.log('Page loaded!');
+});
+```
 
 ---
 
