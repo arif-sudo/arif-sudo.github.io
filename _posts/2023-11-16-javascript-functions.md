@@ -193,7 +193,7 @@ In JavaScript, events are actions or occurrences that happen in the browser, suc
 7. submit
 
 ### Example click event
-```
+```javascript
 const myButton = document.getElementById('myButton');
 
 myButton.addEventListener('click', function() {
@@ -207,7 +207,7 @@ document.addEventListener('keydown', function(event) {
 });    
 {% endhighlight %}
 ### Example load event
-```
+```javascript
 window.addEventListener('load', function() {
   console.log('Page loaded!');
 });
@@ -219,7 +219,7 @@ window.addEventListener('load', function() {
 There are several mechanisms and best practices for handling errors in JavaScript
 
 ### try...catch
-```
+```javascript
 try {
   throw new Error('This is a custom error');
 } catch (error) {
@@ -236,7 +236,7 @@ myObject.on('error', (error) => {
 {% endhighlight %}
 
 ### Global error handling
-```
+```javascript
 window.onerror = function (message, source, lineno, colno, error) {
   console.error('Global error:', error);
 };
