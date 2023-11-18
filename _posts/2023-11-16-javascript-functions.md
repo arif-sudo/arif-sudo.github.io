@@ -216,3 +216,47 @@ window.addEventListener('load', function() {
 ---
 
 ## Error handling
+There are several mechanisms and best practices for handling errors in JavaScript
+
+### try...catch
+```
+try {
+  throw new Error('This is a custom error');
+} catch (error) {
+  console.error('Caught an error:', error.message);
+}
+```
+### Event listeners (Node js)
+{% highlight language %}
+const myObject = new EventEmitter();
+
+myObject.on('error', (error) => {
+  console.error('Error occurred:', error);
+});
+{% endhighlight %}
+
+### Global error handling
+```
+window.onerror = function (message, source, lineno, colno, error) {
+  console.error('Global error:', error);
+};
+```
+### Custom error objects
+{% highlight language %}
+class MyCustomError extends Error {
+  constructor(message) {
+    super(message);
+    this.name = 'MyCustomError';
+  }
+}
+
+try {
+  throw new MyCustomError('This is a custom error');
+} catch (error) {
+  console.error('Caught a custom error:', error.message);
+}   
+{% endhighlight %}
+
+
+
+
