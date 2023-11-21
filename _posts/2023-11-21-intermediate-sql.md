@@ -195,4 +195,4 @@ FROM orders
 WHERE agent_code NOT IN(
 SELECT agent_code FROM agents
 WHERE working_area = 'Bangalore');
-``
+```
