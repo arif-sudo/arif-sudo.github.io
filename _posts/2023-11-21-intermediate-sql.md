@@ -139,3 +139,60 @@ WHERE a.studentid = b.studentid AND b.total_marks >
 FROM marks
 WHERE studentid = 'V002');
 ```
+
+### Subqueries in a HAVING clause
+You may place a subquery in HAVING clause in an outer query. This allows you to filter groups of rows based on the result returned by your subquery
+```sql
+SELECT AVG(ord_amount),COUNT(agent_code),agent_code
+FROM orders 
+GROUP BY agent_code
+HAVING AVG(ord_amount)=
+(SELECT AVG(ord_amount) 
+FROM orders
+WHERE agent_code='A008');
+```
+
+### Subqueries in a FROM clause
+These types of subqueries are also known as inline views because the subquery provides data inline with the FROM clause. The following example retrieves the item_id whose item_id is less than 4
+```sql
+SELECT item_id
+FROM  
+(SELECT item_id   
+FROM FOODS    
+WHERE item_id < 4)
+```
+
+### Error in Single Row Subqueries
+In our previous examples, we have seen, a single row subquery always returns a single row and if a subquery returns more than one row then an error occurs  
+In the following example, the subquery attempts to pass multiple rows to the equality operator (=) in the outer query
+```sql
+SELECT item_id, item_name 
+FROM foods
+WHERE item_id =   
+(SELECT item_id 
+FROM foods   
+WHERE item_name LIKE '%a%');
+```
+> ORA-01427: single-row subquery returns more than one row
+
+### Using IN operator with a Multiple Row Subquery
+IN operator is used to checking a value within a set of values. The list of values may come from the results returned by a subquery
+```sql
+SELECT ord_num, ord_amount, ord_date,
+cust_code, agent_code
+FROM orders
+WHERE agent_code IN(
+SELECT agent_code FROM agents
+WHERE working_area = 'Bangalore');
+```
+
+### Using NOT IN operator with a Multiple Row Subquery
+You can also use NOT IN operator to perform the logical opposite of IN operator
+```sql
+SELECT ord_num, ord_amount, ord_date,
+cust_code, agent_code
+FROM orders
+WHERE agent_code NOT IN(
+SELECT agent_code FROM agents
+WHERE working_area = 'Bangalore');
+``
