@@ -136,8 +136,9 @@ FROM employees;
 ## Relationships  
 There are 4 mian JOIN's in SQL
 They are INNER, LEFT, RIGHT and FULL JOIN
-1. INNER JOIN
-An `INNER JOIN` returns only the rows that have matching values in both tables
+
+### INNER JOIN
+Returns only the rows that have matching values in both tables
 
 ```sql
 SELECT employees.employee_id, employees.first_name, departments.department_name
@@ -145,16 +146,16 @@ FROM employees
 INNER JOIN departments ON employees.department_id = departments.department_id;
 ```
 
-2. LEFT JOIN
-A `LEFT JOIN` returns all rows from the left table and the matched rows from the right table. If there is no match, the result will contain NULL values for columns from the right table
+### LEFT JOIN
+Returns all rows from the left table and the matched rows from the right table. If there is no match, the result will contain NULL values for columns from the right table
 ```sql
 SELECT employees.employee_id, employees.first_name, departments.department_name
 FROM employees
 LEFT JOIN departments ON employees.department_id = departments.department_id;
 ```
 
-3. FULL JOIN
-A `FULL JOIN`, also known as a FULL OUTER JOIN, is a type of join operation in SQL that returns all rows when there is a match in either the left (first) table or the right (second) table. If there is no match, the result will contain NULL values for columns from the table without a match
+### FULL JOIN
+Also known as a FULL OUTER JOIN, is a type of join operation in SQL that returns all rows when there is a match in either the left (first) table or the right (second) table. If there is no match, the result will contain NULL values for columns from the table without a match
 ```sql
 SELECT *
 FROM table1
