@@ -4,7 +4,9 @@ layout: post
 ---
 
 ## Simple queries
-
+```sql
+SELECT * FROM employees;
+```
 ## Relationships
 
 ## Aggregators
