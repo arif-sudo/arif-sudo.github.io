@@ -68,24 +68,24 @@ SELECT vendor_id, vendor_name FROM vendors;
 
 Union ALL with WHERE
 ```sql
-SELECT prod_code,prod_name,com_name
+SELECT prod_code, prod_name, com_name
 FROM product 
-WHERE life>6
+WHERE life > 6
 UNION ALL
-SELECT prod_code,prod_name,com_name
+SELECT prod_code, prod_name, com_name
 FROM purchase 
-WHERE pur_qty>10
+WHERE pur_qty > 10
 ```
 
 Union a table to itself
 ```sql
-SELECT prod_code,prod_name,com_name
+SELECT prod_code, prod_name, com_name
 FROM purchase 
-WHERE pur_qty>6
+WHERE pur_qty > 6
 UNION ALL
-SELECT prod_code,prod_name,com_name
+SELECT prod_code, prod_name, com_name
 FROM purchase 
-WHERE pur_amount>100000
+WHERE pur_amount > 100000
 ```
 Union with different column names  
 In the following example, the two queries have been set using two different criteria and different columns  
@@ -93,11 +93,11 @@ The different columns in two statements are 'life' and 'pur_qty'. But as the dat
 ```sql
 SELECT prod_code,prod_name,life
 FROM product
-WHERE life>6
+WHERE life > 6
 UNION
-SELECT prod_code,prod_name,pur_qty
+SELECT prod_code, prod_name, pur_qty
 FROM purchase
-WHERE pur_qty<20
+WHERE pur_qty < 20
 ```
 
 Union with Inner Join
@@ -127,7 +127,7 @@ ORDER BY 2; -- Order by the second column
 A subquery may occur in :
 - A SELECT clause
 - A FROM clause
-- A WHERE clause
+- A WHERE clause  
 The subquery can be nested inside a SELECT, INSERT, UPDATE, or DELETE statement or inside another subquery
 
 ### You can combine two queries by placing one query inside the other
@@ -137,5 +137,5 @@ FROM student a, marks b
 WHERE a.studentid = b.studentid AND b.total_marks >
 (SELECT total_marks
 FROM marks
-WHERE studentid =  'V002');
+WHERE studentid = 'V002');
 ```
