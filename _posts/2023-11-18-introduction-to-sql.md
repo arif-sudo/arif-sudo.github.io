@@ -21,7 +21,7 @@ SELECT * FROM employees WHERE department_id = 10;
 ```
 
 ### Additional keywords
-* `DISTINCT` keyword is used in a `SELECT` statement to eliminate duplicate rows from the result set
+`DISTINCT` keyword is used in a `SELECT` statement to eliminate duplicate rows from the result set
 ```sql
 SELECT DISTINCT department_id FROM employees;
 ```
@@ -31,7 +31,7 @@ You can also use DISTINCT with multiple columns to retrieve unique combinations 
 SELECT DISTINCT department_id, job_id FROM employees;
 ```
 
-* `ORDER BY` clause is used to sort the result set of a query in either ascending `ASC` or descending `DESC` order based on one or more columns
+`ORDER BY` clause is used to sort the result set of a query in either ascending `ASC` or descending `DESC` order based on one or more columns
 ```sql
 SELECT employee_id, first_name, last_name
 FROM employees
